@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ACID COCKTAILS | Granizados Medellín</title>
+  <meta name="description" content="Granizados con y sin licor en Castilla, La 68, Medellín. 14 sabores, elixir y jeringas.">
+  
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Navegación -->
+  <nav>
+    <b class="brand">ACID Cocktails</b>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#somos">Somos</a>
+      <a href="#granizados">Sabores</a>
+      <a href="#elixir">Elixir</a>
+      <a href="#precios">Precios</a>
+      <a href="#calculadora">Arma tu Granizado</a>
+      <a href="#ubicacion">Ubicación</a>
+      <button id="btn-theme" aria-label="Cambiar Tema">◐</button>
+    </div>
+  </nav>
+
+  <!-- Hero / Header -->
+  <header class="hero" id="inicio">
+    <div class="hero-content">
+      <svg class="flame" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M100 14c8 24 36 38 44 62 10-4 14-14 10-30 24 22 40 52 36 80-6 38-38 62-76 62S30 164 26 126c-2-22 8-44 26-56-2 14 4 24 14 26-6-30 4-58 34-82Z" stroke="var(--p)" stroke-width="6"/>
+        <path d="M30 138c14 34 52 52 88 44 28-6 46-26 52-48" stroke="var(--l)" stroke-width="6"/>
+        <path d="M62 116c10 4 22 8 34 14-8 8-26 6-34-14Z" fill="var(--p)" stroke="var(--p)" stroke-width="3"/>
+        <path d="M138 104l6 14 14 6-14 6-6 14-6-14-14-6 14-6Z" stroke="var(--p)" stroke-width="5"/>
+      </svg>
+      <h1>ACID</h1>
+      <div class="sub">COCKTAILS</div>
+      <div class="loc-pills">
+        <span>📍 Castilla, La 68 · Medellín</span>
+        <span>🍹 Con y sin licor</span>
+        <span>🚀 14 sabores, elixir y jeringas</span>
+      </div>
+      <a class="btn-primary" href="#calculadora">Pedir por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Marquesina -->
+  <div class="marq">
+    <span>✦ GRANIZADOS ✦ 14 SABORES ✦ ELIXIR ✦ JERINGAS ✦ UN GRANIZADO EN ACID COCKTAILS MI AMOR ✦ GRANIZADOS ✦ 14 SABORES ✦ ELIXIR ✦ JERINGAS ✦</span>
+  </div>
+
+  <!-- Sección: Somos -->
+  <section id="somos">
+    <h2><small>✦ SOMOS ✦</small>ACID COCKTAILS</h2>
+    <div class="som-content">
+      <p>Somos granizados con actitud en Castilla, Medellín. Hielo raspado, sabores intensos y licor al gusto: con o sin alcohol, en vaso, balde o litrón, y con elixir o jeringas para llevar la noche al siguiente nivel. Un granizado en Acid Cocktails, mi amor.</p>
+      <div class="stats-grid">
+        <div class="stat-card"><b>14</b><span>Granizados</span></div>
+        <div class="stat-card"><b>8</b><span>Elixir</span></div>
+        <div class="stat-card"><b>5</b><span>Tamaños</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Granizados -->
+  <section id="granizados">
+    <h2><small>✦ GRANIZADOS ✦</small>14 SABORES</h2>
+    <div class="grid" id="grid-granizados"></div>
+  </section>
+
+  <!-- Sección: Elixir -->
+  <section id="elixir">
+    <h2><small>✦ ELIXIR ✦</small>8 SABORES</h2>
+    <div class="grid" id="grid-elixir"></div>
+    <div class="add-ons">
+      <div class="add-card">
+        <em class="lbl">ELIXIR</em>
+        <strong>+$15.000</strong>
+        <p>Adicional para potenciar tu granizado.</p>
+      </div>
+      <div class="add-card">
+        <em class="lbl">JERINGAS</em>
+        <strong>+$1.500</strong>
+        <p>Opción michelada disponible a partir de 20 oz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Precios -->
+  <section id="precios">
+    <h2><small>✦ TAMAÑOS ✦</small>PRECIOS</h2>
+    <div class="tog-container">
+      <button class="tog-btn active" id="btn-semana">Lunes a Jueves</button>
+      <button class="tog-btn" id="btn-finde">Vie · Sáb · Dom · Festivo</button>
+    </div>
+    <div class="sizes-grid" id="grid-sizes"></div>
+  </section>
+
+  <!-- Sección: Calculadora -->
+  <section id="calculadora">
+    <h2><small>✦ SIMULADOR ✦</small>ARMA TU GRANIZADO</h2>
+    <div class="calc-box">
+      <div class="calc-field">
+        <label for="sel-size">1. Selecciona el Tamaño:</label>
+        <select id="sel-size"></select>
+      </div>
+      <div class="calc-field">
+        <label for="sel-day">2. Día del Pedido:</label>
+        <select id="sel-day">
+          <option value="0">Lunes a Jueves</option>
+          <option value="1">Viernes, Sábado, Domingo o Festivo</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="sel-flavor">3. Sabor del Granizado:</label>
+        <select id="sel-flavor"></select>
+      </div>
+      <div class="calc-field">
+        <label for="sel-elixir">4. Añadir Elixir (+$15.000):</label>
+        <select id="sel-elixir">
+          <option value="Ninguno">Sin Elixir</option>
+        </select>
+      </div>
+      <div class="calc-checkbox">
+        <input type="checkbox" id="chk-jeringa">
+        <label for="chk-jeringa">Añadir Jeringa Michelada (+$1.500) <small>(Solo ≥ 20 oz)</small></label>
+      </div>
+      <div class="calc-total">
+        <span>Total Estimado:</span>
+        <strong id="calc-price">$0</strong>
+      </div>
+      <button class="btn-primary btn-full" id="btn-whatsapp">Pedir por WhatsApp 🚀</button>
+    </div>
+  </section>
+
+  <!-- Sección: Ubicación (Sin Mapa) -->
+  <section id="ubicacion">
+    <h2><small>✦ UBICACIÓN ✦</small>VISÍTANOS</h2>
+    <div class="location-box">
+      <p class="address">📍 Calle 97 #68-31, Barrio Castilla, Medellín, Antioquia</p>
+      <p class="schedule">⏰ Abrimos todos los días</p>
+      <div class="social-links">
+        <a class="btn-primary btn-outline" target="_blank" rel="noopener" href="https://www.instagram.com/acidcocktails/">Instagram @acidcocktails</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-title">✦ UN GRANIZADO EN ACID COCKTAILS MI AMOR ✦</p>
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#somos">Somos</a>
+      <a href="#granizados">Sabores</a>
+      <a href="#precios">Precios</a>
+      <a target="_blank" rel="noopener" href="https://www.instagram.com/acidcocktails/">Instagram</a>
+    </div>
+    <small>📍 Cl. 97 # 68-31, Castilla · Medellín<br>Consume responsablemente. Prohibida la venta a menores de 18 años.</small>
+    <small>© 2026 Acid Cocktails</small>
+  </footer>
+
+  <!-- Lógica JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
